@@ -15,7 +15,7 @@ public enum Main {
     ;
 
     // Paramètres de la forêt
-    private static final ForestType FOREST_TYPE = ForestType.RECTANGULAR;
+    private static final ForestType FOREST_TYPE = ForestType.FULLY_MAGIC;
     private static final int FOREST_WIDTH = 16;
     private static final int FOREST_HEIGHT = 6;
     private static final double TREE_DENSITY = 0.12;
