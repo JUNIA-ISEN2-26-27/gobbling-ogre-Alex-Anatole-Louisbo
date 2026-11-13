@@ -36,6 +36,16 @@ public abstract class AbstractForest implements IForest {
         return Optional.of(this.tiles[realY][realX]);
     }
 
+    @Override
+    public Optional<Position> resolvePosition(final int x, final int y) {
+        final int realX = this.resolveX(x);
+        final int realY = this.resolveY(y);
+        if (realX < 0 || realY < 0) {
+            return Optional.empty();
+        }
+        return Optional.of(new Position(realX, realY));
+    }
+
     /** Bord normal : hors limites => -1. */
     protected final int clip(final int value, final int size) {
         return (value >= 0 && value < size) ? value : -1;
